@@ -42,7 +42,6 @@ end
 def words
   dict = {}
   pages = open(PAGES_FILE).read
-#  words = pages.gsub(/[?.,;!":\-\_\[\]()\/<>0123456789“\=…—\*{}%$#~`+&]/, " ").split
   words = pages.gsub(/[^\w|']/, " ").split
   words.each { |w| 
     word = w.downcase
